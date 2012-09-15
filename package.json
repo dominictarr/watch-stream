@@ -1,0 +1,21 @@
+{
+  "name": "watch-stream",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dominictarr/watch-stream",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dominictarr/watch-stream.git"
+  },
+  "dependencies": {
+    "through": "~1.1.0",
+    "watch": "~0.5.1"
+  },
+  "devDependencies": {
+    "tap": "0.3.0"
+  },
+  "scripts": {
+    "test": "tap test"
+  },
+  "author": "'Dominic Tarr' <dominic.tarr@gmail.com> (http://dominictarr.com)",
+  "license": "MIT"
+}
