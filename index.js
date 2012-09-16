@@ -53,11 +53,17 @@ var watcher = module.exports =  function (root, options) {
     // of course, an index would be better.
     // but this is unlikely to be a bottleneck for a while...
 
-    var stream = through()
+    var test = (
+        'function' === typeof _query 
+      ? function (file) {
+          return query(file, files[file])  
+        }
+      : function (file) {
+          return file.match(query)
+        }
+      )
 
-    function test (file) {
-      return file.match(query) 
-    }
+    var stream = through()
 
     stream.on('close', function () {
       emitter.removeListener('change', onChange)
