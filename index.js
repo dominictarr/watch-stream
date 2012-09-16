@@ -117,11 +117,13 @@ var watcher = module.exports =  function (root, options) {
   return emitter
 }
 
-if(!module.parent)
+if(!module.parent) {
   var st = 
   watcher (process.cwd(), {interval: 500})
+
   var query = process.argv[3]
   ;(query ? st.search(query) : st)
     .on('data', function (data) {
       console.log(JSON.stringify(data))
     })
+}
