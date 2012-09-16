@@ -1,3 +1,4 @@
+'use strict';
 var watch = require('watch')
 var fs = require('fs')
 var through = require('through')
@@ -54,7 +55,7 @@ var watcher = module.exports =  function (root, options) {
     // but this is unlikely to be a bottleneck for a while...
 
     var test = (
-        'function' === typeof _query 
+        'function' === typeof query 
       ? function (file) {
           return query(file, files[file])  
         }
