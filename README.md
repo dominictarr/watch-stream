@@ -34,7 +34,7 @@ data objects look like this:
 ```
 `type` it taken off the stat object,
 see [fs.Stats](http://nodejs.org/api/fs.html#fs_class_fs_stats)
-it corrisponds thusly:
+it corresponds thusly:
 ``` js
     return (
         curr.isFile()            ? 'file'
